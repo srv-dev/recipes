@@ -1,0 +1,22 @@
+
+ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    margin-right: 2px;
+    line-height: 40px;
+}
+input {
+    visibility:hidden;
+}
+label {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+input:checked + label {
+    background: rgb(57, 131, 241);
+    color: white;
+}
