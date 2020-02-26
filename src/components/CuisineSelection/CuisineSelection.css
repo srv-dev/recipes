@@ -1,22 +1,22 @@
 
-ul {
+.cuisines-div  ul {
     list-style: none;
 }
-li {
+.cuisines-div  li {
     display: inline-block;
     margin-right: 2px;
     line-height: 40px;
 }
-input {
+.cuisines-div  input {
     visibility:hidden;
 }
-label {
+.cuisines-div  label {
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
     border: solid 1px black;
 }
-input:checked + label {
+.cuisines-div  input:checked + label {
     background: rgb(57, 131, 241);
     color: white;
 }

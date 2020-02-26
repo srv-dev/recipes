@@ -1,0 +1,146 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+#home {
+  text-align: center;
+  margin: 0px auto;
+  width: 70%;
+}
+
+.imagesByTime, .popularImages {
+  width: 300px;
+  height: 150px;
+  overflow: inherit;
+}
+.cuisine {
+  background-image: url('/cuisine.jpeg');
+  opacity: 80%;
+  font-size: 20px;
+}
+
+
+.quickRecipes-container{
+  overflow-x: scroll;
+  width: 100%;
+}
+.quickRecipes{
+  width: fit-content;
+  white-space: nowrap;
+}
+.qr-details{
+  position:relative;
+  height: 100px;
+  padding:5px;
+}
+.qr-name{
+  padding-top: 5px;
+  font-weight: 700;
+  white-space: normal;
+  text-align: left;
+}
+.qr-time{
+  text-align: left;
+  position: absolute;
+    bottom: 10px;
+}
+
+.qr-recipe-card{
+  border-radius: 5px;
+  border: 1px solid #aeaeae;
+  display: inline-block;
+    width: 300px;
+    overflow: hidden;
+    margin:7px;
+}
+
+.thumb-img{
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+}
+.status {
+  line-height: 52px;
+}
+
+.cuisine {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px solid black;
+  position: relative;
+  width: 100%;
+}
+
+.cuisine-img {
+}
+
+.cuisine-text {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  color: white;
+   font: bold 24px/45px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
+
+/* Auto Suggest CSS */
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 100%;
+  height: 30px;
+  padding: 10px 20px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 51px;
+  width: 100%;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}

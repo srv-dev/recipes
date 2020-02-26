@@ -1,8 +1,11 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
+import {useHistory} from 'react-router-dom';
 import app from "../../base";
 
 const SignUp = ({ props }) => {
+
+  const history = useHistory();
 
   const handleSignUp = useCallback(async event => {
     event.preventDefault();
@@ -15,15 +18,18 @@ const SignUp = ({ props }) => {
 
     try {
       await app.auth().createUserWithEmailAndPassword(email.value, password.value);
-      return app.auth().currentUser.updateProfile({
+      app.auth().currentUser.updateProfile({
 			     displayName: name.value
-
 		  })
-      props.push("/");
+      localStorage.setItem('userId', email.value);
+      console.log('BEFORE HISTORY');
+      history.push('/cuisine');
+      console.log('AFTER HISTORY');
+
     } catch( error ) {
       console.log(error.message);
     }
-  }, [props]);
+  }, []);
 
   return(
     <div>
