@@ -2,6 +2,8 @@ import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import {useHistory} from 'react-router-dom';
 import app from "../../base";
+import {Link} from 'react-router-dom';
+import '../Login/Login.css';
 
 const SignUp = ({ props }) => {
 
@@ -22,30 +24,37 @@ const SignUp = ({ props }) => {
 			     displayName: name.value
 		  })
       localStorage.setItem('userId', email.value);
-      console.log('BEFORE HISTORY');
       history.push('/cuisine');
-      console.log('AFTER HISTORY');
 
     } catch( error ) {
-      console.log(error.message);
+      alert(error.message);
     }
   }, []);
 
   return(
-    <div>
-      <h1> Sign Up </h1>
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <div class="fadeIn first">
+          <div class="header pt-3 peach-gradient">
+          <div class="row d-flex justify-content-center">
+            <h3 class="white-text mb-3 pt-3 font-weight-bold">Sign Up</h3>
+          </div>
+        </div>
+        </div>
+
       <form onSubmit={handleSignUp}>
-        <label> Name
-          <input name="name" type="text" placeholder="Name" />
-        </label> <br/>
-        <label> Email
-          <input name="email" type="email" placeholder="Email" />
-        </label> <br/>
-        <label> Password
-          <input name="password" type="password" placeholder="Password" />
-        </label> <br/>
-        <button type="submit"> Sign Up </button>
+        <input type="text" id="name" name="name" className="fadeIn second login-field" placeholder="Your name"/>
+        <input type="text" id="login" name="email" className="fadeIn second login-field" placeholder="Your email"/>
+        <input type="password" id="password" className="fadeIn third login-field" name="password" placeholder="password"/>
+
+        <input type="submit" className="fadeIn fourth peach-gradient" value="Sign Up"/>
       </form>
+
+      <div id="formFooter">
+         Already have an account? &nbsp;
+        <Link to="/login" className="signup-link">Login</Link>
+      </div>
+    </div>
     </div>
   );  // return
 

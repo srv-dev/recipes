@@ -4,19 +4,17 @@
   text-align: center;
   margin: 0px auto;
   width: 70%;
+  padding-top: 50px;
 }
-
+.qr-header, .pr-header, .cui-header{
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
 .imagesByTime, .popularImages {
   width: 300px;
-  height: 150px;
-  overflow: inherit;
+      height: 150px;
+      object-fit: cover;
 }
-.cuisine {
-  background-image: url('/cuisine.jpeg');
-  opacity: 80%;
-  font-size: 20px;
-}
-
 
 .quickRecipes-container{
   overflow-x: scroll;
@@ -71,6 +69,26 @@
 }
 
 .cuisine-img {
+  width:150px;
+  height: 150px;
+  border-radius: 75px;
+  object-fit:cover;
+  opacity: 70%;
+  margin-right: 10px;
+}
+.cui-container {
+  width: 100%;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+  margin-bottom: 100px;
+}
+.cui-div {
+  width: fit-content;
+  white-space: nowrap;
+  display: inline-flex;
+}
+.cui-div-2 {
+
 }
 
 .cuisine-text {
@@ -93,12 +111,12 @@
 
 .react-autosuggest__input {
   width: 100%;
-  height: 30px;
+  height: 50px;
   padding: 10px 20px;
   font-family: Helvetica, sans-serif;
   font-weight: 300;
   font-size: 16px;
-  border: 1px solid #aaa;
+  border: 2px solid #aaa;
   border-radius: 10px;
 }
 

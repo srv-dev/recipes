@@ -57,7 +57,7 @@ export default class CuisineSelection extends React.Component {
           ))
         }
         </ul>
-        <button onClick={this.postCuisines}>Next</button>
+        <button onClick={this.postCuisines} className="next-button">Next</button>
       </div>
     );
   }

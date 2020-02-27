@@ -13,7 +13,6 @@
 .viewport-header {
   position: relative;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
   color: black;
@@ -32,9 +31,13 @@
   filter: brightness(0.6);
 }
 .viewport-header h2 {
-  font-size: 4rem;
-  padding:50px;
+  font-size: 6rem;
+  padding: 50px;
   border-radius: 20px;
+  text-shadow: 0px 0px 15px rgba(0,0,0,1);
+}
+.trivia {
+  color: ghostwhite;
 }
 .login-link {
   text-decoration: none;

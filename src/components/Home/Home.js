@@ -117,10 +117,7 @@ class Home extends React.Component {
     return(
 
       <div id="home">
-        <h3> Hello { app.auth().currentUser.displayName } </h3>
 
-        <button onClick={ () => app.auth().signOut() }> Sign Out </button>
-        <hr />
 
         <Autosuggest
           suggestions={this.state.suggestions}
@@ -133,7 +130,7 @@ class Home extends React.Component {
           inputProps={inputProps}
         />
 
-        <h3> QUICK RECIPES </h3>
+      <h3 className="qr-header"> QUICK RECIPES </h3>
         <div className="quickRecipes-container">
         <div className="quickRecipes">
         {
@@ -151,8 +148,8 @@ class Home extends React.Component {
                 {recipe.title}
               </div>
               <div className="qr-time">
-                <i class="material-icons">access_time</i> {recipe.readyInMinutes} minutes
-                  {recipe.vegan?<i class="material-icons" title="Vegan friendly">eco</i>:""}
+                <i className="material-icons">access_time</i> {recipe.readyInMinutes} minutes
+                  {recipe.vegan?<i className="material-icons" title="Vegan friendly">eco</i>:""}
 
               </div>
             </div>
@@ -162,24 +159,44 @@ class Home extends React.Component {
         </div>
         </div>
 
-        <h3> POPULAR RECIPES </h3>
-        <div className="popularRecipes">
+        <h3 className="pr-header"> POPULAR RECIPES </h3>
+          <div className="quickRecipes-container">
+          <div className="quickRecipes">
         {
           this.state.popularRecipes.map( recipe => (
+            <div className="qr-recipe-card">
+            <div className="qr-image">
             <Link to= {`/recipeDetails/${recipe.id}`}>
               <img src={`${this.state.baseUri}/${recipe.image}`} className="popularImages" />
             </Link>
+          </div>
+          <div className="qr-details">
+            <div className="qr-name">
+              {recipe.title}
+            </div>
+            <div className="qr-time">
+              <i className="material-icons">access_time</i> {recipe.readyInMinutes} minutes
+
+            </div>
+          </div>
+        </div>
           ))
         }
         </div>
+      </div>
 
-        <h3> CUISINES </h3>
-        <div class="cuisine">
+        <h3 className="cui-header"> CUISINES </h3>
+        <div className="cui-container">
+          <div className="cui-div">
           {
             this.state.cuisines.map( cuisine => (
+              <div className="cui-div-2">
               <img src="/cuisine.jpeg" alt="cuisine" className="cuisine-img" />
+              <p> {cuisine} </p>
+              </div>
             ))
           }
+        </div>
         </div>
       </div>
     );
