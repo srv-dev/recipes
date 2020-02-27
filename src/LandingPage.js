@@ -23,7 +23,7 @@ class LandingPage extends React.Component {
     return(
       <div className="landing-container">
         <div className="viewport-header text-focus-in">
-          <h2><Link to='/login' className='login-link'> DELICIOUS RECIPES</Link></h2><br/>
+          <h2>DELICIOUS RECIPES</h2><br/>
           <h4 className="trivia"> {`"${this.state.trivia}"`} </h4>
         </div>
 

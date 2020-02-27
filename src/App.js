@@ -48,7 +48,7 @@ class App extends React.Component {
           ?
           <button class="btn btn-outline-success my-2 my-sm-0" onClick={ () => {app.auth().signOut();localStorage.removeItem('userId');} }> Sign Out </button>
           :
-          <button class="btn btn-outline-success my-2 my-sm-0" onClick={ () => this.props.history.push('/login') }> Login </button>
+          <button class="btn btn-outline-success my-2 my-sm-0" onClick={ () => window.location.href = '/login' }> Login </button>
         }
 
       </div>
