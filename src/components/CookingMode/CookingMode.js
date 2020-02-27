@@ -48,8 +48,8 @@ class CookingMode extends React.Component {
           {
             this.props.location.state.instructions.map( (instruction) => (
 
-              <h3> Step {instruction.number} : 
-                {instruction.step} </h3>
+              <h3 className="instr-header"> Step {instruction.number} : <br/>
+                {instruction.step} </h3> 
             ))
 
           }

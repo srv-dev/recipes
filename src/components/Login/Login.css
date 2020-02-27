@@ -133,14 +133,14 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
 /* ANIMATIONS */
 
 /* Simple CSS3 Fade-in-down Animation */
-.fadeInDown {
+/* .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
+} */
 
 @-webkit-keyframes fadeInDown {
   0% {

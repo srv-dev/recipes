@@ -7,3 +7,7 @@
 .rs-play::after{
     content: "Play";
 }
+
+.instr-header {
+  padding-bottom: 10px;
+}
