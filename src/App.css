@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Rubik|Titillium+Web&display=swap');
+
+.landing-container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viewport-header {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  z-index: 102;
+  opacity: 70%;
+}
+.food-image{
+  object-fit:cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 101;
+  filter: brightness(0.6);
+}
+.viewport-header h2 {
+  font-size: 4rem;
+  padding:50px;
+  border-radius: 20px;
+}
+.login-link {
+  text-decoration: none;
+  color: ghostwhite;
+  font-family: 'Josefin Sans';
+}
+
+.text-focus-in {
+  animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

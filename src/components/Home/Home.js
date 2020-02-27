@@ -178,7 +178,6 @@ class Home extends React.Component {
           {
             this.state.cuisines.map( cuisine => (
               <img src="/cuisine.jpeg" alt="cuisine" className="cuisine-img" />
-                <p className="cuisine-text"> {cuisine} </p>
             ))
           }
         </div>

@@ -33,7 +33,7 @@ export default class CuisineSelection extends React.Component {
     })
     .then( res => {
       console.log(res);
-      this.props.history.push('/');
+      this.props.history.push('/home');
     })
     .catch( err => console.warn(err) );
   };

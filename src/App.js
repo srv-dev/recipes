@@ -2,6 +2,7 @@
 import React from "react";
 // import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import LandingPage from "./LandingPage";
 import Home from "./components/Home/Home";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
@@ -15,12 +16,13 @@ const App = () => {
   return(
     <AuthProvider>
       <Router>
-        <div>
-          <PrivateRoute exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
+      <div>
+          <Route exact path='/' component={LandingPage} />
+          <Route exact path='/login' component={Login} />
+          <PrivateRoute exact path="/home" component={Home} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/cuisine" component={CuisineSelection} />
-          <Route exact path="/recipeDetails/:recipeId" component={RecipeDetails} />
+          <PrivateRoute exact path="/cuisine" component={CuisineSelection} />
+          <PrivateRoute exact path="/recipeDetails/:recipeId" component={RecipeDetails} />
         </div>
       </Router>
     </AuthProvider>
