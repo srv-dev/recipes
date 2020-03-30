@@ -31,3 +31,14 @@ My love towards cooking triggered me to build this Recipes web application. It d
 * Cuisine selection in home page is yet to be developed.
 
 ## Screenshots
+
+* Recipes Home page
+![Recipes Home page](./public/readme-images/recipes-home.png)
+
+* Search Recipes
+![Recipes search](./public/readme-images/search-recipes.png)
+
+* Recipes details
+![Recipes details](./public/readme-images/recipe-details.png)
+
+![Recipes details](./public/readme-images/recipe-details-2.png)
